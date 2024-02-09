@@ -8,6 +8,9 @@ stock_apel = 5
 stock_jeruk = 10
 stock_anggur = 7
 
+print('Selamat Datang')
+
+# Main program
 while True:
 
     # Meminta input jumlah apel yang dibeli kepada user
