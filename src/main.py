@@ -8,44 +8,85 @@ stock_apel = 5
 stock_jeruk = 10
 stock_anggur = 7
 
-print('Selamat Datang')
+# Ucapan pembuka
+print('Selamat Datang di Pasar Buah!')
 
+# Mendefinisikan validasi input untuk number
+def is_number(value):
+    try:
+        int(value)
+        return True
+    except:
+        return False
+
+# Mendefinisikan fungsi input buah
+def inputBuah(stock, price, name='Apel'):
+    """Fungsi untuk meminta jumlah buah dan hitung harga buah
+
+    Args:
+        stock (int): Jumlah buah tersisa
+        price (int): Harga buah
+        name (str, optional): Nama buah yang dipesan. Defaults to 'Apel'.
+
+    Returns:
+        int: total harga, dan stock
+    """
+    while True:
+        # Meminta jumlah buah yang dipesan
+        qty = input(f'Masukkan jumlah {name}: ')
+        # Validasi inputan
+        if is_number(qty):
+            qty = int(qty)
+            # Membandingkan ketersediaan buah dengan pesanan
+            if qty > stock:
+                print(f'Jumlah pesanan tidak terpenuhi, stock {name} sisa {stock}')
+            else:
+                break
+        else:
+            print('Masukkan angka!')
+
+    # Menghitung total harga buah
+    totalPrice = qty * price
+
+    # Update stock buah
+    stock -= int(qty) 
+
+    return qty, totalPrice, stock
+
+def pembayaran(nominal):
+    """Fungsi untuk membayar belanjaan
+
+    Args:
+        nominal (int): Jumlah uang yang dibayar
+    """
+    while True:
+        # Meminta input uang pembayaran
+        bayar = input('Silahkan masukkan uang Anda:')
+        # Validasi input
+        if is_number(bayar):
+            bayar = int(bayar)
+            # Menghitung kekurangan atau sisa
+            if bayar >= nominal:
+                print('\nTerima kasih')
+                print(f'Uang kembalian Anda sebesar {bayar - nominal}\n')
+                break
+            else:
+                print(f'\nUang anda kurang sebesar {nominal - bayar}\n')
+        else:
+            print('Masukkan angka!')
+
+    
 # Main program
 while True:
-
-    # Meminta input jumlah apel yang dibeli kepada user
-    while True:
-        n_apel = int(input('Masukkan jumlah apel: '))
-        if n_apel > stock_apel:
-            print(f'Jumlah pesanan tidak terpenuhi, stock Apel sisa {stock_apel}')
-        else:
-            break
-
-    # Meminta input jumlah jeruk yang dibeli kepada user
-    while True:
-        n_jeruk = int(input('Masukkan jumlah jeruk: '))
-        if n_jeruk > stock_jeruk:
-            print(f'Jumlah pesanan tidak terpenuhi, stock Jeruk sisa {stock_jeruk}')
-        else:
-            break
-
-    # Meminta input jumlah anggur yang dibeli kepada user
-    while True:
-        n_anggur = int(input('Masukkan jumlah anggur: '))
-        if n_anggur > stock_anggur:
-            print(f'Jumlah pesanan tidak terpenuhi, stock Anggur sisa {stock_anggur}')
-        else:
-            break
-
-    # Menghitung total belanjaan per buah
-    total_apel = n_apel * price_apel
-    total_jeruk = n_jeruk * price_jeruk
-    total_anggur = n_anggur * price_anggur
+    # Hitung harga per buah
+    n_apel, total_apel, stock_apel = inputBuah(stock_apel, price_apel, name='Apel')
+    n_jeruk, total_jeruk, stock_jeruk = inputBuah(stock_jeruk, price_jeruk, name='Jeruk')
+    n_anggur, total_anggur, stock_anggur = inputBuah(stock_anggur, price_anggur, name='Anggur')
 
     # Menghitung total belanjaan
     total = total_apel + total_jeruk + total_anggur
 
-    # Show
+    # Tampilkan detail belanjaan
     print(f'''\nDetail Belanjaan
         
     Apel : {n_apel} x {price_apel} = {total_apel}
@@ -56,19 +97,7 @@ while True:
     ''')
 
     # Melakukan pembayaran
-    while True:
-        bayar = int(input('Silahkan masukkan uang Anda:'))
-        if bayar >= total:
-            print('\nTerima kasih')
-            print(f'Uang kembalian Anda sebesar {bayar - total}\n')
-            break
-        else:
-            print(f'\nUang anda kurang sebesar {total - bayar}\n')
-        
-    # Update stock buah
-    stock_apel -= n_apel
-    stock_jeruk -= n_jeruk
-    stock_anggur -= n_anggur
+    pembayaran(total)
 
     # Konfirmasi belanja ulang
     konfirmasi = input('Apakah akan melakukan belanja lagi?: ')
