@@ -1,10 +1,16 @@
 import market
 
-database = [
-    [0, 'Apel', 20, 10000],
-    [1, 'Anggur', 15, 15000],
-    [2, 'Jeruk', 25, 20000],
-]
+# database = [
+#     [0, 'Apel', 20, 10000],
+#     [1, 'Anggur', 15, 15000],
+#     [2, 'Jeruk', 25, 20000],
+# ]
+
+database = {
+    'Apel': [0, 'Apel', 20, 10000],
+    'Anggur': [1, 'Anggur', 15, 15000],
+    'Jeruk': [2, 'Jeruk', 25, 20000],
+}
 
 main_menu = '''
 Selamat Datang di Pasar Buah!
