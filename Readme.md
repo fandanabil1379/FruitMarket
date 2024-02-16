@@ -24,9 +24,11 @@ The directory structure of IndoMarket project looks like this:
     │
     ├── data               <- Fruit & vegetable database
     │
+    ├── docs               <- The document will consist of a detailed presentation or images.
+    │
     ├── src                <- Source code for use in this project.
     │
-    ├── requirements.txt   <- The requirements file for reproducing the analysis environment, e.g.
+    └── requirements.txt   <- The requirements file for reproducing the analysis environment, e.g.
                              generated with `pip freeze > requirements.txt`
 
 ## Contribute
