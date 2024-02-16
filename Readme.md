@@ -1,11 +1,13 @@
-## Market
+![Header](./docs/banner.png)
 
-Market application was released in 2023 and developed by MarketCorp Inc. Helping business people especially those engaged in the sale of fruits or vegetables is our motivation for developing this application. We want to increase their profits by improving business management. IndoMarket makes it easy to recapitulate inventory and purchase goods process. IndoMarket offers four excellent features including:
+## FruitMarket
 
-1. **Read stock**, Market displays the entire stock of items available in the database, and you will always get the latest updates from your database.
-2. **Add stock**, Market helps you register new items and update existing items, such as quantity or price.
-3. **Delete stock**, Market provides high mobility to remove items that you do not need or have expired.
-4. **Purchase**, Market provides an experience for customers to purchase and pay for any item from anywhere at any time.
+FruitMarket application was released in 2023 and developed by MarketCorp Inc. Helping business people especially those engaged in the sale of fruits or vegetables is our motivation for developing this application. We want to increase their profits by improving business management. FruitMarket makes it easy to recapitulate inventory and purchase goods process. FruitMarket offers four excellent features including:
+
+1. **Read stock**, FruitMarket displays the entire stock of items available in the database, and you will always get the latest updates from your database.
+2. **Add stock**, FruitMarket helps you register new items and update existing items, such as quantity or price.
+3. **Delete stock**, FruitMarket provides high mobility to remove items that you do not need or have expired.
+4. **Purchase**, FruitMarket provides an experience for customers to purchase and pay for any item from anywhere at any time.
 
 ## Installation
 
