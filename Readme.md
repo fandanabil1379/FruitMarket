@@ -13,7 +13,7 @@ FruitMarket application was released in 2023 and developed by MarketCorp Inc. He
 
 To get this project, you can clone it by running the following code:
 
-    git clone git@github.com:fandanabil1379/Market.git
+    git clone git@github.com:fandanabil1379/FruitMarket.git
 
     
 ## Project Organization
@@ -33,4 +33,4 @@ The directory structure of IndoMarket project looks like this:
 
 ## Contribute
 
-If you'd like to contribute to IndoMarket Apps, check out https://github.com/fandanabil1379/Market.git, or feel free to contact me.
+If you'd like to contribute to IndoMarket Apps, check out https://github.com/fandanabil1379/FruitMarket.git, or feel free to contact me.
