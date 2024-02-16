@@ -1,6 +1,6 @@
 ![Header](./docs/header.png)
 
-## FruitMarket Apps
+## About
 
 FruitMarket application was released in 2023 and developed by MarketCorp Inc. Helping business people especially those engaged in the sale of fruits or vegetables is our motivation for developing this application. We want to increase their profits by improving business management. FruitMarket makes it easy to recapitulate inventory and purchase goods process. FruitMarket offers four excellent features including:
 
