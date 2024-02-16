@@ -1,4 +1,4 @@
-![Header](./docs/banner.png)
+![Header](./docs/header.png)
 
 ## FruitMarket Apps
 
